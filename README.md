@@ -1,7 +1,7 @@
 # Twitch to Slack
 
-Converts Twitch Emoticons from a Twitch Channel into an Emojipacks compatible
-YAML file. Then use the Emojipacks project to upload the export into your Slack
+Converts Twitch Emoticons from a Twitch Channel into an [Emojipacks](https://github.com/lambtron/emojipacks) compatible
+YAML file. Then use the [Emojipacks](https://github.com/lambtron/emojipacks#usage) project to upload the export into your Slack
 channel.
 
 ## How to Use
@@ -9,4 +9,4 @@ channel.
  * `cd twitch-to-slack`
  * `bundle install`
  * `ruby twitch_to_slack.rb CHANNEL_NAME`
- * Run Emojipacks using outputted file in `emojipacks` folder
+ * Run [Emojipacks](https://github.com/lambtron/emojipacks#usage) using outputted file in `emojipacks` folder
