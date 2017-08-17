@@ -13,7 +13,7 @@ class TwitchToSlack
     twitch_emotes = get_twitch_emoticons
     yaml_content = to_emojipacks_yaml(twitch_emotes)
     # Store to Emojipacks compatible YAML
-    File.open("emojipacks/#{@twitch_channel}.yaml", 'w') {|f| f.write yaml_content }
+    File.open("emojipacks/#{@twitch_channel}.yaml", 'w') { |f| f.write yaml_content }
   end
 
   ##
@@ -37,13 +37,6 @@ class TwitchToSlack
     emoticons
   end
 
-  ##
-  # Imports emotes into Slack group
-  #
-  def import_slack_emotes
-    raise NotImplementedError
-  end
-
   private
 
   ##
@@ -64,7 +57,6 @@ end
 if ARGV[0].nil?
   puts "Missing Twitch Channel argument"
 else
-
   connector = TwitchToSlack.new(ARGV[0])
   puts "Getting subscriber only emotes for #{ARGV[0]}"
   connector.save_twitch_emoticons_to_emojipacks_yaml
