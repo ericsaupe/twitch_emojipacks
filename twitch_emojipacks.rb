@@ -2,7 +2,7 @@ require 'httparty'
 require 'pry'
 require 'yaml'
 
-class TwitchToSlack
+class TwitchEmojipacks
   include HTTParty
 
   def initialize(twitch_channel)
@@ -57,7 +57,7 @@ end
 if ARGV[0].nil?
   puts "Missing Twitch Channel argument"
 else
-  connector = TwitchToSlack.new(ARGV[0])
+  connector = TwitchEmojipacks.new(ARGV[0])
   puts "Getting subscriber only emotes for #{ARGV[0]}"
   connector.save_twitch_emoticons_to_emojipacks_yaml
   puts "Emojipack saved to: emojipacks/#{ARGV[0]}.yaml"
